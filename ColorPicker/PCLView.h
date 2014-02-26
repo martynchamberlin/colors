@@ -10,4 +10,7 @@
 
 @interface PCLView : UIView
 
+// static function to return the proper dimensions for each box
++ ( CGRect )frameDimensions;
+
 @end

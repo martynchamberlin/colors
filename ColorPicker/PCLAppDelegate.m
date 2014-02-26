@@ -8,7 +8,7 @@
 
 #import "PCLAppDelegate.h"
 #import "PCLViewController.h"
-#import "PCLView.h"
+//#import "PCLView.h"
 
 @implementation PCLAppDelegate
 
@@ -21,10 +21,10 @@
     self.window.rootViewController = colorVC;
     
     // Add custom views
-    CGRect redRect = self.window.bounds;
-    PCLView *redView = [[PCLView alloc] initWithFrame:redRect];
-    [self.window addSubview:redView];
-    
+    //CGRect redRect = [PCLView frameDimensions];
+    //PCLView *redView = [[PCLView alloc] initWithFrame:redRect];
+    //[self.window addSubview:redView];
+
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

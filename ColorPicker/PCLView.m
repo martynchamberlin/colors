@@ -10,6 +10,16 @@
 
 @implementation PCLView
 
++ (CGRect)frameDimensions
+{
+    int padding = 20;
+    int margin_top = 50;
+    int width = 320 - (padding * 2);
+    
+    CGRect frame = CGRectMake(padding, 100, width, margin_top);
+    return frame;
+}
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -24,17 +34,13 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
-            NSLog(@"Self is %p", self);
+    NSLog(@"Self is %p", self);
     // 40 points padding on the left and right
-    int padding = 20;
-    int margin_top = 50;
-    int width = self.bounds.size.width - (padding * 2);
-    
-    CGRect redFrame = CGRectMake(padding, 100, width, margin_top);
-    PCLView *redView = [[ PCLView alloc] initWithFrame:redFrame ];
+
+    //self = [[ PCLView alloc] initWithFrame:redFrame ];
     // Initially set background color to light grey
 
-    redView.backgroundColor = [UIColor colorWithRed:1
+    self.backgroundColor = [UIColor colorWithRed:1
                                               green:1
                                                blue:1
                                               alpha:1.0];
@@ -51,15 +57,14 @@
     CGGradientRef gradient = CGGradientCreateWithColorComponents( colorspace, components, locations, 2);
     
     CGPoint startPoint = CGPointMake( 0, 0 );
-    CGPoint endPoint = CGPointMake( 280, 0 );
-    NSLog(@"%d", width);
+    CGPoint endPoint = CGPointMake( 280, 0);
     CGContextDrawLinearGradient( currentContext, gradient, startPoint, endPoint, 0);
     
     CGGradientRelease( gradient );
     CGColorSpaceRelease( colorspace );
     
     // Make the red RGB box appear to the screen
-    [self.window addSubview:redView];
+    [self.window addSubview:self];
 }
 
 

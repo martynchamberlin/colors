@@ -10,4 +10,5 @@
 
 @interface PCLViewController : UIViewController
 
+- (void)updateBox:(UIView *)Box colors:(CGFloat[8])colors;
 @end
