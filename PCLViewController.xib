@@ -77,7 +77,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tDC-Zr-CtM" userLabel="redView">
+                <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tDC-Zr-CtM" userLabel="redView">
                     <rect key="frame" x="20" y="260" width="280" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
@@ -95,7 +95,7 @@
                         <accessibilityTraits key="traits" none="YES" updatesFrequently="YES"/>
                     </accessibility>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JTF-zn-f5y" userLabel="greenView">
+                <view tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JTF-zn-f5y" userLabel="greenView">
                     <rect key="frame" x="20" y="346" width="280" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
@@ -113,7 +113,7 @@
                         <accessibilityTraits key="traits" none="YES" updatesFrequently="YES"/>
                     </accessibility>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ywk-In-tsW" userLabel="blueView">
+                <view tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ywk-In-tsW" userLabel="blueView">
                     <rect key="frame" x="20" y="432" width="281" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
