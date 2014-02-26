@@ -21,7 +21,6 @@
 		088DA7A318BD6492008DB96F /* ColorPickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 088DA7A218BD6492008DB96F /* ColorPickerTests.m */; };
 		088DA7AF18BD64BC008DB96F /* PCLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 088DA7AD18BD64BB008DB96F /* PCLViewController.m */; };
 		088DA7B018BD64BC008DB96F /* PCLViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 088DA7AE18BD64BB008DB96F /* PCLViewController.xib */; };
-		088DA7B318BD6617008DB96F /* PCLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 088DA7B218BD6617008DB96F /* PCLView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +53,6 @@
 		088DA7AC18BD64BB008DB96F /* PCLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCLViewController.h; sourceTree = "<group>"; };
 		088DA7AD18BD64BB008DB96F /* PCLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCLViewController.m; sourceTree = "<group>"; };
 		088DA7AE18BD64BB008DB96F /* PCLViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCLViewController.xib; sourceTree = "<group>"; };
-		088DA7B118BD6617008DB96F /* PCLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCLView.h; sourceTree = "<group>"; };
-		088DA7B218BD6617008DB96F /* PCLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCLView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,8 +117,6 @@
 			children = (
 				088DA78C18BD6492008DB96F /* PCLAppDelegate.h */,
 				088DA78D18BD6492008DB96F /* PCLAppDelegate.m */,
-				088DA7B118BD6617008DB96F /* PCLView.h */,
-				088DA7B218BD6617008DB96F /* PCLView.m */,
 				088DA78F18BD6492008DB96F /* Images.xcassets */,
 				088DA78418BD6492008DB96F /* Supporting Files */,
 			);
@@ -257,7 +252,6 @@
 			files = (
 				088DA78E18BD6492008DB96F /* PCLAppDelegate.m in Sources */,
 				088DA7AF18BD64BC008DB96F /* PCLViewController.m in Sources */,
-				088DA7B318BD6617008DB96F /* PCLView.m in Sources */,
 				088DA78A18BD6492008DB96F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,6 +453,7 @@
 				088DA7A818BD6492008DB96F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		088DA7A918BD6492008DB96F /* Build configuration list for PBXNativeTarget "ColorsTests" */ = {
 			isa = XCConfigurationList;
@@ -467,6 +462,7 @@
 				088DA7AB18BD6492008DB96F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,5 +10,6 @@
 
 @interface PCLViewController : UIViewController
 
-- (void)updateBox:(UIView *)Box colors:(CGFloat[8])colors;
+- (void)updateBox:(UIView *)box startR:(int)startR startG:(int)startG startB:(int)startB finishR:(int)finishR finishG:(int)finishG finishB:(int)finishB;
+- (bool)shouldAutorotate;
 @end
