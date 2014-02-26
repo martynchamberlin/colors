@@ -39,41 +39,72 @@
     return false;
 }
 
-- (IBAction)moveRedSlider:(id)sender
+- (void)updateRedControl
 {
-    float num = self.redSlider.value;
+    [self updateBox:self.redView
+             startR:0
+             startG:self.greenSlider.value
+             startB:self.blueSlider.value
+            finishR:1
+            finishG:self.greenSlider.value
+            finishB:self.blueSlider.value ];
+}
+- (void) updateGreenControl
+{
+    [self updateBox:self.greenView
+             startR:self.redSlider.value
+             startG:0
+             startB:self.blueSlider.value
+            finishR:self.redSlider.value
+            finishG:1
+            finishB:self.blueSlider.value ];
+}
+- (void)updateBlueControl
+{
     
-    [self updateBox:self.greenView startR:num startG:0 startB:0 finishR:num finishG:1 finishB:0];
+    [self updateBox:self.blueView
+             startR:self.redSlider.value
+             startG:self.greenSlider.value
+             startB:0
+            finishR:self.redSlider.value
+            finishG:self.greenSlider.value
+            finishB:1];
+}
+- (void)updateInputs
+{
+    self.redInput.text = [NSString stringWithFormat:@"%d", (int) (self.redSlider.value * 255) ];
+    self.greenInput.text = [NSString stringWithFormat:@"%d", (int) (self.greenSlider.value * 255) ];
+    self.blueInput.text = [NSString stringWithFormat:@"%d", (int) (self.blueSlider.value * 255) ];
+    long long longlongred = (long long) (self.redSlider.value * 255);
+    long long longlonggreen = (long long) (self.greenSlider.value * 255);
+    long long longlongblue = (long long) (self.blueSlider.value * 255);
+    self.hexInput.text = [NSString stringWithFormat:@"%llx%llx%llx", longlongred, longlonggreen, longlongblue];
+}
 
-    [self updateBox:self.blueView startR:num startG:0 startB:0 finishR:num finishG:0 finishB:1];
-    
+// This event fires when the user changes any of the sliders
+- (IBAction)moveAnySlider:(id)sender
+{
     UIColor * currentColor = [UIColor colorWithRed:self.redSlider.value green:self.greenSlider.value blue:self.blueSlider.value alpha:1];
     
     self.colorBox.backgroundColor = currentColor;
+    [self updateInputs];
+}
+- (IBAction)moveRedSlider:(id)sender
+{
+    [self updateGreenControl];
+    [self updateBlueControl];
 }
 
 - (IBAction)moveGreenSlider:(id)sender
 {
-    float num = self.greenSlider.value;
-    [self updateBox:self.redView startR:0 startG:num startB:0 finishR:1 finishG:num finishB:0];
-    
-    [self updateBox:self.blueView startR:0 startG:num startB:0 finishR:0 finishG:num finishB:1];
-    
-    UIColor * currentColor = [UIColor colorWithRed:self.redSlider.value green:self.greenSlider.value blue:self.blueSlider.value alpha:1];
-    
-    self.colorBox.backgroundColor = currentColor;
+    [self updateRedControl];
+    [self updateBlueControl];
 }
 
 - (IBAction)moveBlueSlider:(id)sender
 {
-    float num = self.blueSlider.value;
-    [self updateBox:self.redView startR:0 startG:0 startB:num finishR:1 finishG:0 finishB:num];
-    
-    [self updateBox:self.greenView startR:0 startG:0 startB:num finishR:0 finishG:1 finishB:num];
-    
-    UIColor * currentColor = [UIColor colorWithRed:self.redSlider.value green:self.greenSlider.value blue:self.blueSlider.value alpha:1];
-    
-    self.colorBox.backgroundColor = currentColor;
+    [self updateRedControl];
+    [self updateGreenControl];
 }
 
 
@@ -154,13 +185,10 @@
     self.greenSlider.layer.zPosition = 100;
     self.blueSlider.layer.zPosition = 100;
     
-
-    
-    // Get the initial gradients in each box
-    [self updateBox:self.redView startR:0 startG:0 startB:0 finishR:1 finishG:0 finishB:0];
-    [self updateBox:self.greenView startR:0 startG:0 startB:0 finishR:0 finishG:1 finishB:0];
-    [self updateBox:self.blueView startR:0 startG:0 startB:0 finishR:0 finishG:0 finishB:1];
-
+    [self updateRedControl];
+    [self updateGreenControl];
+    [self updateBlueControl];
+    [self updateInputs];
     
     self.redView.backgroundColor = [UIColor purpleColor];
 }

@@ -13,8 +13,13 @@
 - (void)updateBox:(UIView *)box startR:(float)startR startG:(float)startG startB:(float)startB finishR:(float)finishR finishG:(float)finishG finishB:(float)finishB;
 - (bool)shouldAutorotate;
 
+- (void)updateBlueControl;
+- (void)updateGreenControl;
+- (void)updateRedControl;
+- (void)updateInputs;
+
 - (IBAction)moveRedSlider:(id)sender;
 - (IBAction)moveGreenSlider:(id)sender;
 - (IBAction)moveBlueSlider:(id)sender;
-
+- (IBAction)moveAnySlider:(id)sender;
 @end
