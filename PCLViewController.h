@@ -14,4 +14,7 @@
 - (bool)shouldAutorotate;
 
 - (IBAction)moveRedSlider:(id)sender;
+- (IBAction)moveGreenSlider:(id)sender;
+- (IBAction)moveBlueSlider:(id)sender;
+
 @end

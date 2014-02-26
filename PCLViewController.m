@@ -42,18 +42,45 @@
 - (IBAction)moveRedSlider:(id)sender
 {
     float num = self.redSlider.value;
-    [self updateBox:self.greenView startR:num startG:0 startB:0 finishR:num finishG:num finishB:0];
+    
+    [self updateBox:self.greenView startR:num startG:0 startB:0 finishR:num finishG:1 finishB:0];
 
-    [self updateBox:self.blueView startR:num startG:0 startB:0 finishR:num finishG:0 finishB:num];
+    [self updateBox:self.blueView startR:num startG:0 startB:0 finishR:num finishG:0 finishB:1];
     
     UIColor * currentColor = [UIColor colorWithRed:self.redSlider.value green:self.greenSlider.value blue:self.blueSlider.value alpha:1];
     
-    NSLog(@"current color is %@", currentColor);
     self.colorBox.backgroundColor = currentColor;
-
 }
+
+- (IBAction)moveGreenSlider:(id)sender
+{
+    float num = self.greenSlider.value;
+    [self updateBox:self.redView startR:0 startG:num startB:0 finishR:1 finishG:num finishB:0];
+    
+    [self updateBox:self.blueView startR:0 startG:num startB:0 finishR:0 finishG:num finishB:1];
+    
+    UIColor * currentColor = [UIColor colorWithRed:self.redSlider.value green:self.greenSlider.value blue:self.blueSlider.value alpha:1];
+    
+    self.colorBox.backgroundColor = currentColor;
+}
+
+- (IBAction)moveBlueSlider:(id)sender
+{
+    float num = self.blueSlider.value;
+    [self updateBox:self.redView startR:0 startG:0 startB:num finishR:1 finishG:0 finishB:num];
+    
+    [self updateBox:self.greenView startR:0 startG:0 startB:num finishR:0 finishG:1 finishB:num];
+    
+    UIColor * currentColor = [UIColor colorWithRed:self.redSlider.value green:self.greenSlider.value blue:self.blueSlider.value alpha:1];
+    
+    self.colorBox.backgroundColor = currentColor;
+}
+
+
 - (void)updateBox:(UIView *)box startR:(float)startR startG:(float)startG startB:(float)startB finishR:(float)finishR finishG:(float)finishG finishB:(float)finishB
 {
+    self.colorBox.layer.cornerRadius = 65;
+    self.colorBox.layer.masksToBounds = true;
     
     // Initial setup is the same for the three boxes
     self.gradientLayer = [CAGradientLayer layer];
