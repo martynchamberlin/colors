@@ -24,7 +24,7 @@
 @property (nonatomic, weak) IBOutlet UITextField *hexInput;
 @property (nonatomic, strong) CAGradientLayer * gradientLayer;
 
-// Store previous layer
+// Store previous layer, so we can remove them and save memory
 @property (nonatomic, strong) CAGradientLayer *redLayer;
 @property (nonatomic, strong) CAGradientLayer *greenLayer;
 @property (nonatomic, strong) CAGradientLayer *blueLayer;
@@ -39,7 +39,20 @@
     return false;
 }
 
-- (void)updateBox:(UIView *)box startR:(int)startR startG:(int)startG startB:(int)startB finishR:(int)finishR finishG:(int)finishG finishB:(int)finishB
+- (IBAction)moveRedSlider:(id)sender
+{
+    float num = self.redSlider.value;
+    [self updateBox:self.greenView startR:num startG:0 startB:0 finishR:num finishG:num finishB:0];
+
+    [self updateBox:self.blueView startR:num startG:0 startB:0 finishR:num finishG:0 finishB:num];
+    
+    UIColor * currentColor = [UIColor colorWithRed:self.redSlider.value green:self.greenSlider.value blue:self.blueSlider.value alpha:1];
+    
+    NSLog(@"current color is %@", currentColor);
+    self.colorBox.backgroundColor = currentColor;
+
+}
+- (void)updateBox:(UIView *)box startR:(float)startR startG:(float)startG startB:(float)startB finishR:(float)finishR finishG:(float)finishG finishB:(float)finishB
 {
     
     // Initial setup is the same for the three boxes
@@ -61,27 +74,27 @@
     
     // Check to see if a layer already exists
     bool previousLayer = false;
-    if ( [box tag] == 1 )
+    if ( [box tag] == 1 ) // box is red
     {
-        if (self.redLayer != nil ) // box is red
+        if (self.redLayer != nil )
         {
             [box.layer replaceSublayer:self.redLayer with:self.gradientLayer];
             previousLayer = true;
         }
         [self setRedLayer:self.gradientLayer];
     }
-    else if ( box.tag == 2 )
+    else if ( box.tag == 2 ) // box is green
     {
-        if ( self.greenLayer != nil ) // box is green
+        if ( self.greenLayer != nil )
         {
             [box.layer replaceSublayer:self.greenLayer with:self.gradientLayer];
             previousLayer = true;
         }
         [self setGreenLayer:self.gradientLayer];
     }
-    else if ( [box tag] == 3 )
+    else if ( [box tag] == 3 ) // box is blue
     {
-        if ( self.blueLayer != nil ) // box is blue
+        if ( self.blueLayer != nil )
         {
             [box.layer replaceSublayer:self.blueLayer with:self.gradientLayer];
             previousLayer = true;
@@ -120,8 +133,7 @@
     [self updateBox:self.redView startR:0 startG:0 startB:0 finishR:1 finishG:0 finishB:0];
     [self updateBox:self.greenView startR:0 startG:0 startB:0 finishR:0 finishG:1 finishB:0];
     [self updateBox:self.blueView startR:0 startG:0 startB:0 finishR:0 finishG:0 finishB:1];
-    
-[self updateBox:self.redView startR:0 startG:0 startB:0 finishR:1 finishG:0 finishB:1];
+
     
     self.redView.backgroundColor = [UIColor purpleColor];
 }

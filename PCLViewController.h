@@ -10,6 +10,8 @@
 
 @interface PCLViewController : UIViewController
 
-- (void)updateBox:(UIView *)box startR:(int)startR startG:(int)startG startB:(int)startB finishR:(int)finishR finishG:(int)finishG finishB:(int)finishB;
+- (void)updateBox:(UIView *)box startR:(float)startR startG:(float)startG startB:(float)startB finishR:(float)finishR finishG:(float)finishG finishB:(float)finishB;
 - (bool)shouldAutorotate;
+
+- (IBAction)moveRedSlider:(id)sender;
 @end
