@@ -22,7 +22,6 @@
 @property (nonatomic, weak) IBOutlet UITextField *greenInput;
 @property (nonatomic, weak) IBOutlet UITextField *blueInput;
 @property (nonatomic, weak) IBOutlet UITextField *hexInput;
-@property (nonatomic, weak) NSArray *boxes;
 @property (nonatomic, strong) CAGradientLayer * gradientLayer;
 
 @end
@@ -37,6 +36,13 @@
 
 - (void)updateBox:(UIView *)box startR:(int)startR startG:(int)startG startB:(int)startB finishR:(int)finishR finishG:(int)finishG finishB:(int)finishB
 {
+
+    
+    self.gradientLayer = [CAGradientLayer layer];
+    self.gradientLayer.frame = box.bounds;
+    self.gradientLayer.startPoint = CGPointMake(0, 0);
+    self.gradientLayer.endPoint = CGPointMake(1, 0);
+    
     UIColor *startColor = [UIColor colorWithRed:startR
                                          green:startG
                                           blue:startB
@@ -46,17 +52,15 @@
                                            blue:finishB
                                           alpha:1.0];
 
-    self.gradientLayer.colors = [NSArray arrayWithObjects: (id)startColor,(id)finishColor, nil];
+    self.gradientLayer.colors = [NSArray arrayWithObjects: (id)[startColor CGColor],(id)[finishColor CGColor], nil];
                                  
     [box.layer insertSublayer:self.gradientLayer atIndex:1];
-    //[self.redView.layer insertSublayer:self.gradientLayer atIndex:1];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.boxes = [NSArray arrayWithObjects:_redView, _greenView, _blueView, nil];
 
     }
     return self;
@@ -66,41 +70,15 @@
 {
     [super viewDidLoad];
     
-    /** 
-     * This code isn't doing a thing for me. I am not sure why
-     *
-    for ( int i = 0; i < [self.boxes count]; i++ )
-    {
-        UIView *v = [self.boxes objectAtIndex:i];
-        v.backgroundColor = [UIColor redColor];
-        
-        v.layer.cornerRadius = 10;
-        v.layer.masksToBounds = true;
-    }
-     */
-    
-    //self.redView.layer.cornerRadius = 10;
-    //self.greenView.layer.cornerRadius = 10;
-    //self.blueView.layer.cornerRadius = 10;
-    
-    //self.redView.layer.masksToBounds = true;
-    //self.greenView.layer.masksToBounds = true;
-    //self.blueView.layer.masksToBounds = true;
-    
     // Make z index high up because otherwise they get lost underneath
     // the gradients
     self.redSlider.layer.zPosition = 100;
     self.greenSlider.layer.zPosition = 100;
     self.blueSlider.layer.zPosition = 100;
     
-    
-    self.gradientLayer = [CAGradientLayer layer];
-    self.gradientLayer.frame = self.redView.bounds;
-    self.gradientLayer.startPoint = CGPointMake(0, 0);
-    self.gradientLayer.endPoint = CGPointMake(1, 0);
+
     
     [self updateBox:self.redView startR:0 startG:0 startB:0 finishR:1 finishG:0 finishB:0];
-    
     
     
     NSLog(@"Success");
