@@ -80,20 +80,6 @@
                 <view autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tDC-Zr-CtM" userLabel="redView">
                     <rect key="frame" x="20" y="281" width="280" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.90000000000000002" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4wl-V2-1a9">
-                            <rect key="frame" x="-15" y="8" width="311" height="34"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="tintColor" red="1" green="0.36752109859999998" blue="0.47817989820000001" alpha="0.0" colorSpace="calibratedRGB"/>
-                            <color key="minimumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
-                            <color key="maximumTrackTintColor" red="0.77178332270000005" green="0.51981409700000003" blue="0.70268328810000003" alpha="0.0" colorSpace="calibratedRGB"/>
-                            <color key="thumbTintColor" red="0.77178332270000005" green="0.51981409700000003" blue="0.70268328810000003" alpha="0.0" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="moveAnySlider:" destination="-1" eventType="valueChanged" id="yOe-lP-iQR"/>
-                                <action selector="moveRedSlider:" destination="-1" eventType="valueChanged" id="Mb4-ML-HyA"/>
-                            </connections>
-                        </slider>
-                    </subviews>
                     <color key="backgroundColor" red="0.96678847850000005" green="0.95894142550000006" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <accessibility key="accessibilityConfiguration">
                         <accessibilityTraits key="traits" none="YES" updatesFrequently="YES"/>
@@ -102,20 +88,6 @@
                 <view tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JTF-zn-f5y" userLabel="greenView">
                     <rect key="frame" x="20" y="367" width="280" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.90000000000000002" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gRA-gC-j8B">
-                            <rect key="frame" x="-15" y="8" width="311" height="34"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="tintColor" red="1" green="0.36752109859999998" blue="0.47817989820000001" alpha="0.0" colorSpace="calibratedRGB"/>
-                            <color key="minimumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
-                            <color key="maximumTrackTintColor" red="0.77178332270000005" green="0.51981409700000003" blue="0.70268328810000003" alpha="0.0" colorSpace="calibratedRGB"/>
-                            <color key="thumbTintColor" red="0.77178332270000005" green="0.51981409700000003" blue="0.70268328810000003" alpha="0.0" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="moveAnySlider:" destination="-1" eventType="valueChanged" id="W2U-LQ-JrF"/>
-                                <action selector="moveGreenSlider:" destination="-1" eventType="valueChanged" id="0T7-1e-pqh"/>
-                            </connections>
-                        </slider>
-                    </subviews>
                     <color key="backgroundColor" red="0.96678847850000005" green="0.95894142550000006" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <accessibility key="accessibilityConfiguration">
                         <accessibilityTraits key="traits" none="YES" updatesFrequently="YES"/>
@@ -124,20 +96,6 @@
                 <view tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ywk-In-tsW" userLabel="blueView">
                     <rect key="frame" x="20" y="453" width="281" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.90000000000000002" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="CV6-uh-IkC">
-                            <rect key="frame" x="-15" y="8" width="311" height="34"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="tintColor" red="1" green="0.36752109859999998" blue="0.47817989820000001" alpha="0.0" colorSpace="calibratedRGB"/>
-                            <color key="minimumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
-                            <color key="maximumTrackTintColor" red="0.77178332270000005" green="0.51981409700000003" blue="0.70268328810000003" alpha="0.0" colorSpace="calibratedRGB"/>
-                            <color key="thumbTintColor" red="0.77178332270000005" green="0.51981409700000003" blue="0.70268328810000003" alpha="0.0" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="moveAnySlider:" destination="-1" eventType="valueChanged" id="rEW-ez-cQI"/>
-                                <action selector="moveBlueSlider:" destination="-1" eventType="valueChanged" id="B3e-Us-z75"/>
-                            </connections>
-                        </slider>
-                    </subviews>
                     <color key="backgroundColor" red="0.96678847850000005" green="0.95894142550000006" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <accessibility key="accessibilityConfiguration">
                         <accessibilityTraits key="traits" none="YES" updatesFrequently="YES"/>
@@ -148,6 +106,42 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.96678847850000005" green="0.95894142550000006" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
+                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.90000000000000002" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gRA-gC-j8B">
+                    <rect key="frame" x="5" y="375" width="311" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="tintColor" red="1" green="0.36752109859999998" blue="0.47817989820000001" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <color key="minimumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <color key="maximumTrackTintColor" red="0.77178332270000005" green="0.51981409700000003" blue="0.70268328810000003" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <color key="thumbTintColor" red="0.77178332270000005" green="0.51981409700000003" blue="0.70268328810000003" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="moveAnySlider:" destination="-1" eventType="valueChanged" id="W2U-LQ-JrF"/>
+                        <action selector="moveGreenSlider:" destination="-1" eventType="valueChanged" id="0T7-1e-pqh"/>
+                    </connections>
+                </slider>
+                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.90000000000000002" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4wl-V2-1a9">
+                    <rect key="frame" x="5" y="289" width="311" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="tintColor" red="1" green="0.36752109859999998" blue="0.47817989820000001" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <color key="minimumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <color key="maximumTrackTintColor" red="0.77178332270000005" green="0.51981409700000003" blue="0.70268328810000003" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <color key="thumbTintColor" red="0.77178332270000005" green="0.51981409700000003" blue="0.70268328810000003" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="moveAnySlider:" destination="-1" eventType="valueChanged" id="yOe-lP-iQR"/>
+                        <action selector="moveRedSlider:" destination="-1" eventType="valueChanged" id="Mb4-ML-HyA"/>
+                    </connections>
+                </slider>
+                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.90000000000000002" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="CV6-uh-IkC">
+                    <rect key="frame" x="5" y="461" width="311" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="tintColor" red="1" green="0.36752109859999998" blue="0.47817989820000001" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <color key="minimumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <color key="maximumTrackTintColor" red="0.77178332270000005" green="0.51981409700000003" blue="0.70268328810000003" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <color key="thumbTintColor" red="0.77178332270000005" green="0.51981409700000003" blue="0.70268328810000003" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="moveAnySlider:" destination="-1" eventType="valueChanged" id="rEW-ez-cQI"/>
+                        <action selector="moveBlueSlider:" destination="-1" eventType="valueChanged" id="B3e-Us-z75"/>
+                    </connections>
+                </slider>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>

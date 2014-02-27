@@ -78,7 +78,8 @@
     long long longlongred = (long long) (self.redSlider.value * 255);
     long long longlonggreen = (long long) (self.greenSlider.value * 255);
     long long longlongblue = (long long) (self.blueSlider.value * 255);
-    self.hexInput.text = [NSString stringWithFormat:@"%llx%llx%llx", longlongred, longlonggreen, longlongblue];
+    NSLog(@"%f", (float)longlongred);
+    self.hexInput.text = [NSString stringWithFormat:@"%02llx%02llx%02llx", longlongred, longlonggreen, longlongblue];
 }
 
 // This event fires when the user changes any of the sliders
@@ -110,9 +111,6 @@
 
 - (void)updateBox:(UIView *)box startR:(float)startR startG:(float)startG startB:(float)startB finishR:(float)finishR finishG:(float)finishG finishB:(float)finishB
 {
-    self.colorBox.layer.cornerRadius = 65;
-    self.colorBox.layer.masksToBounds = true;
-    
     // Initial setup is the same for the three boxes
     self.gradientLayer = [CAGradientLayer layer];
     self.gradientLayer.frame = box.bounds;
@@ -178,6 +176,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    // Make preview UIView a circle
+    self.colorBox.layer.cornerRadius = 65;
+    self.colorBox.layer.masksToBounds = true;
     
     // Make z index high up because otherwise they get lost underneath
     // the gradients
@@ -189,8 +191,6 @@
     [self updateGreenControl];
     [self updateBlueControl];
     [self updateInputs];
-    
-    self.redView.backgroundColor = [UIColor purpleColor];
 }
 
 - (void)didReceiveMemoryWarning
