@@ -11,27 +11,14 @@
 @interface SliderView()
 
 @property (nonatomic) int xBeforeTouchesMoved;
-@property (nonatomic) bool resetX;
 
 @end
 
 @implementation SliderView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
-
--(void)SliderView
-{
-    self.resetX = true;
-}
-
+// In order to determine how far a person has scrolled,
+// we first need to track the x coordinate of their initial touch
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-   //NSLog( @"things are happening");
     UITouch *anyTouch = [touches anyObject];
     CGPoint touchLocation = [anyTouch locationInView:self.superview];
     self.xBeforeTouchesMoved = touchLocation.x;
@@ -39,21 +26,19 @@
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    float currentSliderX = self.frame.origin.x;
     UITouch *anyTouch = [touches anyObject];
     CGPoint touchLocation = [anyTouch locationInView:self.superview];
-//    if ( ! self.resetX )
-//    {
-        float distanceMoved = touchLocation.x - self.xBeforeTouchesMoved;
-    NSLog ( @"Distance moved is %f", distanceMoved);
-    //NSLog( @"%f", distanceMoved );
-        // TODO: make sure this doesn't equal 0
-        CGRect rect = self.frame;
-        rect.origin.x += distanceMoved;
+    float distanceMoved = touchLocation.x - self.xBeforeTouchesMoved;
+    CGRect rect = self.frame;
+    rect.origin.x += distanceMoved;
+    
+    // As long as they aren't trying to scroll out of their screen allow the Slider to scroll along x axis
+    if ( rect.origin.x >= 0 && rect.origin.x + self.frame.size.width <= self.superview.frame.size.width )
+    {
         self.frame = rect;
-//    }
+    }
+    
     self.xBeforeTouchesMoved = touchLocation.x;
-//    self.resetX = true;
 }
 
 
