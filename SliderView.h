@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
 
-@interface SliderView : UIView
+@class TestView;
+@protocol AppDelegate <NSObject>
+@end
+
+@interface SliderView : UIView 
 
 @end

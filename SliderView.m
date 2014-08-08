@@ -7,8 +7,10 @@
 //
 
 #import "SliderView.h"
+#import "AppDelegate.h"
 
 @interface SliderView()
+@property (assign) id <AppDelegate> delegate;
 
 @property (nonatomic) int xBeforeTouchesMoved;
 
@@ -16,7 +18,6 @@
 @property (nonatomic, strong) IBOutlet UIView * sliderControlGView;
 @property (nonatomic, strong) IBOutlet UIView * sliderControlBView;
 
-@property (nonatomic, strong) IBOutlet UIView * circle;
 
 @end
 
