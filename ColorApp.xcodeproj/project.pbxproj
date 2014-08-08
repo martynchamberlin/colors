@@ -13,6 +13,7 @@
 		0880B9991994614B00140B10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0880B9971994614B00140B10 /* Main.storyboard */; };
 		0880B99B1994614B00140B10 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0880B99A1994614B00140B10 /* Images.xcassets */; };
 		0880B9A71994614B00140B10 /* ColorAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0880B9A61994614B00140B10 /* ColorAppTests.m */; };
+		0880B9B21994646100140B10 /* SliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0880B9B11994646100140B10 /* SliderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,8 @@
 		0880B9A01994614B00140B10 /* ColorAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0880B9A51994614B00140B10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0880B9A61994614B00140B10 /* ColorAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorAppTests.m; sourceTree = "<group>"; };
+		0880B9B01994646100140B10 /* SliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderView.h; sourceTree = "<group>"; };
+		0880B9B11994646100140B10 /* SliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,8 @@
 		0880B9811994614B00140B10 = {
 			isa = PBXGroup;
 			children = (
+				0880B9B01994646100140B10 /* SliderView.h */,
+				0880B9B11994646100140B10 /* SliderView.m */,
 				0880B98C1994614B00140B10 /* ColorApp */,
 				0880B9A31994614B00140B10 /* ColorAppTests */,
 				0880B98B1994614B00140B10 /* Products */,
@@ -216,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0880B9961994614B00140B10 /* ViewController.m in Sources */,
+				0880B9B21994646100140B10 /* SliderView.m in Sources */,
 				0880B9931994614B00140B10 /* AppDelegate.m in Sources */,
 				0880B9901994614B00140B10 /* main.m in Sources */,
 			);
@@ -404,6 +410,7 @@
 				0880B9AC1994614B00140B10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0880B9AD1994614B00140B10 /* Build configuration list for PBXNativeTarget "ColorAppTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +419,7 @@
 				0880B9AF1994614B00140B10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
