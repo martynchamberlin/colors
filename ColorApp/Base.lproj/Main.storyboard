@@ -3,6 +3,7 @@
     <dependencies>
         <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,15 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Hz-uw-FCb">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Hz-uw-FCb">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mGg-ge-hbd">
-                                        <rect key="frame" x="0.0" y="27" width="320" height="101"/>
-                                        <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="79" y="40" width="162" height="162"/>
+                                        <color key="backgroundColor" red="0.30196078431372547" green="0.62745098039215685" blue="0.83137254901960789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="mGg-ge-hbd" secondAttribute="height" multiplier="1:1" id="80x-2L-Fqa"/>
+                                        </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dus-TX-Cm2" customClass="SliderView">
-                                        <rect key="frame" x="0.0" y="254" width="320" height="59"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dus-TX-Cm2" customClass="SliderView">
+                                        <rect key="frame" x="0.0" y="303" width="320" height="59"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ojk-1B-CI0">
                                                 <rect key="frame" x="25" y="0.0" width="50" height="59"/>
@@ -40,7 +44,7 @@
                                         </connections>
                                     </view>
                                     <view tag="1" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ad6-GV-JGM" customClass="SliderView">
-                                        <rect key="frame" x="0.0" y="336" width="320" height="59"/>
+                                        <rect key="frame" x="0.0" y="390" width="320" height="59"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bNX-pf-KbL">
                                                 <rect key="frame" x="25" y="0.0" width="50" height="59"/>
@@ -55,7 +59,7 @@
                                         </connections>
                                     </view>
                                     <view tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IvO-cq-Wme" customClass="SliderView">
-                                        <rect key="frame" x="0.0" y="415" width="320" height="59"/>
+                                        <rect key="frame" x="0.0" y="478" width="320" height="59"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5pF-MH-gOq">
                                                 <rect key="frame" x="25" y="0.0" width="50" height="59"/>
@@ -69,31 +73,24 @@
                                             <outlet property="sliderControlRView" destination="ojk-1B-CI0" id="sAo-os-BYa"/>
                                         </connections>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="253" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HzU-sm-JXC">
-                                        <rect key="frame" x="137" y="165" width="29" height="21"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="#4D80D4" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PeL-2M-K0h">
+                                        <rect key="frame" x="190" y="243" width="90" height="24"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="253" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjP-j9-mAb">
-                                        <rect key="frame" x="208" y="165" width="29" height="21"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#336699" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PeL-2M-K0h">
-                                        <rect key="frame" x="118" y="207" width="67" height="21"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="253" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TG9-Ed-jMP">
-                                        <rect key="frame" x="69" y="165" width="29" height="21"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="77.160.212" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TG9-Ed-jMP">
+                                        <rect key="frame" x="40" y="242" width="99" height="24"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="TG9-Ed-jMP" firstAttribute="leading" secondItem="6Hz-uw-FCb" secondAttribute="leading" constant="40" id="G1p-vY-Sfs"/>
+                                    <constraint firstAttribute="trailing" secondItem="PeL-2M-K0h" secondAttribute="trailing" constant="40" id="Hxy-ts-rtg"/>
+                                    <constraint firstAttribute="centerX" secondItem="mGg-ge-hbd" secondAttribute="centerX" id="ftT-fO-vAY"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="0ac-vy-ddc"/>
                                 </connections>
@@ -102,11 +99,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="6Hz-uw-FCb" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="3Mv-0H-Qvf"/>
-                            <constraint firstItem="mGg-ge-hbd" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="tbs-1T-dZJ"/>
+                            <constraint firstAttribute="width" secondItem="Dus-TX-Cm2" secondAttribute="width" id="5nK-av-p4b"/>
                             <constraint firstItem="6Hz-uw-FCb" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" id="xZS-Et-QqO"/>
                             <constraint firstItem="ad6-GV-JGM" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="xrX-Vd-5jd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="circle" destination="mGg-ge-hbd" id="eNi-51-PfQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

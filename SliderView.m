@@ -16,6 +16,8 @@
 @property (nonatomic, strong) IBOutlet UIView * sliderControlGView;
 @property (nonatomic, strong) IBOutlet UIView * sliderControlBView;
 
+@property (nonatomic, strong) IBOutlet UIView * circle;
+
 @end
 
 @implementation SliderView
