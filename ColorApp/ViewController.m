@@ -10,6 +10,7 @@
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIView *circle;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
 
@@ -18,7 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.circle.layer.cornerRadius = 81;
+    self.circle.layer.cornerRadius = self.circle.layer.bounds.size.width / 2;
+    //self.scrollView.bounces = NO;
 }
 
 - (void)didReceiveMemoryWarning {

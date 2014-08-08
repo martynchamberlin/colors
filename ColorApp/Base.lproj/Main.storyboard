@@ -227,6 +227,7 @@
                     </view>
                     <connections>
                         <outlet property="circle" destination="mGg-ge-hbd" id="eNi-51-PfQ"/>
+                        <outlet property="scrollView" destination="6Hz-uw-FCb" id="PJ4-TQ-CjV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

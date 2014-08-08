@@ -46,6 +46,7 @@
     }
     
     self.xBeforeTouchesMoved = touchLocation.x;
+    
 }
 
 // Man, this is redneck
