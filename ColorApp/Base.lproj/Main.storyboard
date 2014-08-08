@@ -24,35 +24,50 @@
                                         <rect key="frame" x="0.0" y="27" width="320" height="101"/>
                                         <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dus-TX-Cm2">
-                                        <rect key="frame" x="0.0" y="255" width="320" height="59"/>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dus-TX-Cm2" customClass="SliderView">
+                                        <rect key="frame" x="0.0" y="254" width="320" height="59"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ojk-1B-CI0" customClass="SliderView">
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ojk-1B-CI0">
                                                 <rect key="frame" x="25" y="0.0" width="50" height="59"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="sliderControlBView" destination="5pF-MH-gOq" id="psG-V9-YoC"/>
+                                            <outlet property="sliderControlGView" destination="bNX-pf-KbL" id="A8t-bS-sNm"/>
+                                            <outlet property="sliderControlRView" destination="ojk-1B-CI0" id="TG4-Dh-ZxK"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IvO-cq-Wme">
-                                        <rect key="frame" x="0.0" y="415" width="320" height="59"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5pF-MH-gOq" customClass="SliderView">
-                                                <rect key="frame" x="25" y="0.0" width="50" height="59"/>
-                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </view>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ad6-GV-JGM">
+                                    <view tag="1" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ad6-GV-JGM" customClass="SliderView">
                                         <rect key="frame" x="0.0" y="336" width="320" height="59"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bNX-pf-KbL" customClass="SliderView">
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bNX-pf-KbL">
                                                 <rect key="frame" x="25" y="0.0" width="50" height="59"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="sliderControlBView" destination="5pF-MH-gOq" id="Zsn-gE-ttJ"/>
+                                            <outlet property="sliderControlGView" destination="bNX-pf-KbL" id="Tcg-Xn-Leg"/>
+                                            <outlet property="sliderControlRView" destination="ojk-1B-CI0" id="dao-gy-qcp"/>
+                                        </connections>
+                                    </view>
+                                    <view tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IvO-cq-Wme" customClass="SliderView">
+                                        <rect key="frame" x="0.0" y="415" width="320" height="59"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5pF-MH-gOq">
+                                                <rect key="frame" x="25" y="0.0" width="50" height="59"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="sliderControlBView" destination="5pF-MH-gOq" id="MyS-iS-hLP"/>
+                                            <outlet property="sliderControlGView" destination="bNX-pf-KbL" id="ndu-LR-g0i"/>
+                                            <outlet property="sliderControlRView" destination="ojk-1B-CI0" id="sAo-os-BYa"/>
+                                        </connections>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="253" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HzU-sm-JXC">
                                         <rect key="frame" x="137" y="165" width="29" height="21"/>
@@ -80,7 +95,7 @@
                                     </label>
                                 </subviews>
                                 <connections>
-                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="mPX-1Y-2F1"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="0ac-vy-ddc"/>
                                 </connections>
                             </scrollView>
                         </subviews>
