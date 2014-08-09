@@ -10,7 +10,6 @@
 #import "AppDelegate.h"
 
 @interface SliderView()
-@property (assign) id <AppDelegate> delegate;
 
 @property (nonatomic) int xBeforeTouchesMoved;
 
@@ -22,6 +21,12 @@
 @end
 
 @implementation SliderView
+
+ -(id)initWithCoder:(NSCoder*)coder
+{
+    self = [super initWithCoder:coder];
+    return self;
+}
 
 // In order to determine how far a person has scrolled,
 // we first need to track the x coordinate of their initial touch
@@ -39,33 +44,16 @@
     UITouch *anyTouch = [touches anyObject];
     CGPoint touchLocation = [anyTouch locationInView:self.superview];
     float distanceMoved = touchLocation.x - self.xBeforeTouchesMoved;
-    CGRect rect = [[self getThing:self.tag] frame];
+    CGRect rect = [self.subviews.firstObject frame];
     rect.origin.x += distanceMoved;
     NSLog( @"%f", distanceMoved);
     // As long as they aren't trying to scroll out of their screen allow the Slider to scroll along x axis
     if ( rect.origin.x >= 0 && rect.origin.x + rect.size.width <= self.superview.frame.size.width ) {
-        [[self getThing:self.tag] setFrame: rect];
+        [self.subviews.firstObject setFrame: rect];
         NSLog(@"yes");
     }
     
     self.xBeforeTouchesMoved = touchLocation.x;
-    
-}
-
-// Man, this is redneck
--(UIView *)getThing:(NSUInteger)tag{
-    if ( tag == 0 )
-    {
-        return self.sliderControlRView;
-    }
-    else if ( tag == 1 )
-    {
-        return self.sliderControlGView;
-    }
-    else // if ( tag == 2)
-    {
-        return self.sliderControlBView;
-    }
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
