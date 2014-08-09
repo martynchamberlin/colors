@@ -26,6 +26,9 @@
 // In order to determine how far a person has scrolled,
 // we first need to track the x coordinate of their initial touch
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [(UIScrollView *)self.superview setBounces:NO];
+    [(UIScrollView *)self.superview setScrollEnabled:NO];
+    
     UITouch *anyTouch = [touches anyObject];
     CGPoint touchLocation = [anyTouch locationInView:self.superview];
     self.xBeforeTouchesMoved = touchLocation.x;
@@ -63,6 +66,11 @@
     {
         return self.sliderControlBView;
     }
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    [(UIScrollView *)self.superview setBounces:YES];
+    [(UIScrollView *)self.superview setScrollEnabled:YES];
 }
 
 @end

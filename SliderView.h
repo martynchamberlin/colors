@@ -9,10 +9,18 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 
+
+//  SliderView.h
+@protocol SliderViewDelegate <NSObject>
+@optional
+- (void) isScrollViewToBounce:(BOOL)isBounce;
+@end
+
+
 @class TestView;
 @protocol AppDelegate <NSObject>
 @end
 
 @interface SliderView : UIView 
-
+@property (nonatomic, weak) id <SliderViewDelegate> sliderViewDelegate;
 @end

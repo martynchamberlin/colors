@@ -7,8 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "SliderView.h"
 
-@interface ViewController ()
+@interface ViewController () <SliderViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *circle;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
@@ -18,7 +19,7 @@
             
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
     self.circle.layer.cornerRadius = self.circle.layer.bounds.size.width / 2;
     //self.scrollView.bounces = NO;
 }
@@ -27,6 +28,14 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)isScrollViewToBounce:(BOOL)isBounce {
+    self.scrollView.bounces = isBounce;
+}
+
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+//    [self isScrollViewToBounce];
+//}
 
 
 @end
