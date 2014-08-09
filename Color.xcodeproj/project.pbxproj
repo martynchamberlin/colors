@@ -12,7 +12,7 @@
 		0880B9961994614B00140B10 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0880B9951994614B00140B10 /* ViewController.m */; };
 		0880B9991994614B00140B10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0880B9971994614B00140B10 /* Main.storyboard */; };
 		0880B99B1994614B00140B10 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0880B99A1994614B00140B10 /* Images.xcassets */; };
-		0880B9A71994614B00140B10 /* ColorAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0880B9A61994614B00140B10 /* ColorAppTests.m */; };
+		0880B9A71994614B00140B10 /* ColorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0880B9A61994614B00140B10 /* ColorTests.m */; };
 		0880B9B21994646100140B10 /* SliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0880B9B11994646100140B10 /* SliderView.m */; };
 /* End PBXBuildFile section */
 
@@ -22,12 +22,12 @@
 			containerPortal = 0880B9821994614B00140B10 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 0880B9891994614B00140B10;
-			remoteInfo = ColorApp;
+			remoteInfo = Color;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0880B98A1994614B00140B10 /* ColorApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0880B98A1994614B00140B10 /* Color.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Color.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0880B98E1994614B00140B10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0880B98F1994614B00140B10 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0880B9911994614B00140B10 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -36,9 +36,9 @@
 		0880B9951994614B00140B10 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0880B9981994614B00140B10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0880B99A1994614B00140B10 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		0880B9A01994614B00140B10 /* ColorAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0880B9A01994614B00140B10 /* ColorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0880B9A51994614B00140B10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0880B9A61994614B00140B10 /* ColorAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorAppTests.m; sourceTree = "<group>"; };
+		0880B9A61994614B00140B10 /* ColorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorTests.m; sourceTree = "<group>"; };
 		0880B9B01994646100140B10 /* SliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderView.h; sourceTree = "<group>"; };
 		0880B9B11994646100140B10 /* SliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,8 +66,8 @@
 			children = (
 				0880B9B01994646100140B10 /* SliderView.h */,
 				0880B9B11994646100140B10 /* SliderView.m */,
-				0880B98C1994614B00140B10 /* ColorApp */,
-				0880B9A31994614B00140B10 /* ColorAppTests */,
+				0880B98C1994614B00140B10 /* Color */,
+				0880B9A31994614B00140B10 /* ColorTests */,
 				0880B98B1994614B00140B10 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,13 +75,13 @@
 		0880B98B1994614B00140B10 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0880B98A1994614B00140B10 /* ColorApp.app */,
-				0880B9A01994614B00140B10 /* ColorAppTests.xctest */,
+				0880B98A1994614B00140B10 /* Color.app */,
+				0880B9A01994614B00140B10 /* ColorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0880B98C1994614B00140B10 /* ColorApp */ = {
+		0880B98C1994614B00140B10 /* Color */ = {
 			isa = PBXGroup;
 			children = (
 				0880B9911994614B00140B10 /* AppDelegate.h */,
@@ -92,7 +92,7 @@
 				0880B99A1994614B00140B10 /* Images.xcassets */,
 				0880B98D1994614B00140B10 /* Supporting Files */,
 			);
-			path = ColorApp;
+			path = Color;
 			sourceTree = "<group>";
 		};
 		0880B98D1994614B00140B10 /* Supporting Files */ = {
@@ -104,13 +104,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		0880B9A31994614B00140B10 /* ColorAppTests */ = {
+		0880B9A31994614B00140B10 /* ColorTests */ = {
 			isa = PBXGroup;
 			children = (
-				0880B9A61994614B00140B10 /* ColorAppTests.m */,
+				0880B9A61994614B00140B10 /* ColorTests.m */,
 				0880B9A41994614B00140B10 /* Supporting Files */,
 			);
-			path = ColorAppTests;
+			path = ColorTests;
 			sourceTree = "<group>";
 		};
 		0880B9A41994614B00140B10 /* Supporting Files */ = {
@@ -124,9 +124,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0880B9891994614B00140B10 /* ColorApp */ = {
+		0880B9891994614B00140B10 /* Color */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0880B9AA1994614B00140B10 /* Build configuration list for PBXNativeTarget "ColorApp" */;
+			buildConfigurationList = 0880B9AA1994614B00140B10 /* Build configuration list for PBXNativeTarget "Color" */;
 			buildPhases = (
 				0880B9861994614B00140B10 /* Sources */,
 				0880B9871994614B00140B10 /* Frameworks */,
@@ -136,14 +136,14 @@
 			);
 			dependencies = (
 			);
-			name = ColorApp;
-			productName = ColorApp;
-			productReference = 0880B98A1994614B00140B10 /* ColorApp.app */;
+			name = Color;
+			productName = Color;
+			productReference = 0880B98A1994614B00140B10 /* Color.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0880B99F1994614B00140B10 /* ColorAppTests */ = {
+		0880B99F1994614B00140B10 /* ColorTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0880B9AD1994614B00140B10 /* Build configuration list for PBXNativeTarget "ColorAppTests" */;
+			buildConfigurationList = 0880B9AD1994614B00140B10 /* Build configuration list for PBXNativeTarget "ColorTests" */;
 			buildPhases = (
 				0880B99C1994614B00140B10 /* Sources */,
 				0880B99D1994614B00140B10 /* Frameworks */,
@@ -154,9 +154,9 @@
 			dependencies = (
 				0880B9A21994614B00140B10 /* PBXTargetDependency */,
 			);
-			name = ColorAppTests;
-			productName = ColorAppTests;
-			productReference = 0880B9A01994614B00140B10 /* ColorAppTests.xctest */;
+			name = ColorTests;
+			productName = ColorTests;
+			productReference = 0880B9A01994614B00140B10 /* ColorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -177,7 +177,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0880B9851994614B00140B10 /* Build configuration list for PBXProject "ColorApp" */;
+			buildConfigurationList = 0880B9851994614B00140B10 /* Build configuration list for PBXProject "Color" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -190,8 +190,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0880B9891994614B00140B10 /* ColorApp */,
-				0880B99F1994614B00140B10 /* ColorAppTests */,
+				0880B9891994614B00140B10 /* Color */,
+				0880B99F1994614B00140B10 /* ColorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -231,7 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0880B9A71994614B00140B10 /* ColorAppTests.m in Sources */,
+				0880B9A71994614B00140B10 /* ColorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +240,7 @@
 /* Begin PBXTargetDependency section */
 		0880B9A21994614B00140B10 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0880B9891994614B00140B10 /* ColorApp */;
+			target = 0880B9891994614B00140B10 /* Color */;
 			targetProxy = 0880B9A11994614B00140B10 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -338,7 +338,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				INFOPLIST_FILE = ColorApp/Info.plist;
+				INFOPLIST_FILE = Color/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -350,7 +350,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				INFOPLIST_FILE = ColorApp/Info.plist;
+				INFOPLIST_FILE = Color/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -369,10 +369,10 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = ColorAppTests/Info.plist;
+				INFOPLIST_FILE = ColorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ColorApp.app/ColorApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Color.app/Color";
 			};
 			name = Debug;
 		};
@@ -384,17 +384,17 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = ColorAppTests/Info.plist;
+				INFOPLIST_FILE = ColorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ColorApp.app/ColorApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Color.app/Color";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0880B9851994614B00140B10 /* Build configuration list for PBXProject "ColorApp" */ = {
+		0880B9851994614B00140B10 /* Build configuration list for PBXProject "Color" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0880B9A81994614B00140B10 /* Debug */,
@@ -403,7 +403,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0880B9AA1994614B00140B10 /* Build configuration list for PBXNativeTarget "ColorApp" */ = {
+		0880B9AA1994614B00140B10 /* Build configuration list for PBXNativeTarget "Color" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0880B9AB1994614B00140B10 /* Debug */,
@@ -412,7 +412,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0880B9AD1994614B00140B10 /* Build configuration list for PBXNativeTarget "ColorAppTests" */ = {
+		0880B9AD1994614B00140B10 /* Build configuration list for PBXNativeTarget "ColorTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0880B9AE1994614B00140B10 /* Debug */,
