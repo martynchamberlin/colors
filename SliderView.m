@@ -16,7 +16,9 @@
 @property (nonatomic, strong) IBOutlet UIView * sliderControlRView;
 @property (nonatomic, strong) IBOutlet UIView * sliderControlGView;
 @property (nonatomic, strong) IBOutlet UIView * sliderControlBView;
-
+@property float r;
+@property float g;
+@property float b;
 
 @end
 
@@ -60,13 +62,70 @@
     // of this for free since we're using a custom control
     
     float half_of_slider_width = (int)[self.subviews.firstObject frame].size.width / 2;
+    float currently_selected = [self.subviews.firstObject frame].origin.x + half_of_slider_width;
+    
+    // We want there to be a 10 pixel area where 0.0 or 1.0 (for left and right
+    // respectively) don't change. This improves the UX imo
     float start = 30.0 + half_of_slider_width;
     float finish = self.superview.frame.size.width - start;
+
+    float distance = ( currently_selected - start ) / ( finish - start );
     
-    float distance = ( touchLocation.x - start ) / ( finish - start );
     if ( distance < 0.0 ) { distance = 0.0; }
     else if ( distance > 1.0 ) { distance = 1.0; }
+    
+    if ( self.tag == 0 )
+    {
+        [self updateGreenControl];
+        [self updateBlueControl];
+    }
+    else if ( self.tag == 1 )
+    {
+        [self updateRedControl];
+        [self updateBlueControl];
+    }
+    else if ( self.tag == 2 )
+    {
+        [self updateRedControl];
+        [self updateGreenControl];
+    }
+    
     NSLog( @"%f", distance);
+}
+
+
+- (void)updateRedControl
+{
+    [self updateBox:0
+             startG:self.r
+             startB:self.g
+            finishR:1
+            finishG:self.g
+            finishB:self.b ];
+}
+- (void) updateGreenControl
+{
+    [self updateBox:self.r
+             startG:0
+             startB:self.g
+            finishR:self.r
+            finishG:1
+            finishB:self.g ];
+}
+- (void)updateBlueControl
+{
+    
+    [self updateBox:self.r
+             startG:self.g
+             startB:0
+            finishR:self.r
+            finishG:self.g
+            finishB:1];
+}
+
+- (void)updateBox:(float)startR startG:(float)startG startB:(float)startB finishR:(float)finishR finishG:(float)finishG finishB:(float)finishB
+{
+    
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
