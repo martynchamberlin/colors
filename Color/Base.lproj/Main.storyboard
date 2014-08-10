@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="14A299l" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
@@ -21,18 +20,18 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Hz-uw-FCb">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aVE-Ac-4xm">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="283"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVE-Ac-4xm">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="284"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="#4D80D4" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PeL-2M-K0h">
-                                                <rect key="frame" x="190" y="242" width="90" height="24"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="#7f7f7f" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PeL-2M-K0h">
+                                                <rect key="frame" x="190" y="242" width="90" height="25"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mGg-ge-hbd">
                                                 <rect key="frame" x="79" y="40" width="162" height="162"/>
-                                                <color key="backgroundColor" red="0.30196078431372547" green="0.62745098039215685" blue="0.83137254901960789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.49803921568627452" green="0.49803921568627452" blue="0.49803921568627452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="162" id="3vy-aK-sR5"/>
                                                     <constraint firstAttribute="width" secondItem="mGg-ge-hbd" secondAttribute="height" multiplier="1:1" id="80x-2L-Fqa"/>
@@ -69,6 +68,8 @@
                                         <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="circle" destination="mGg-ge-hbd" id="dqG-k4-APg"/>
+                                            <outlet property="hex" destination="PeL-2M-K0h" id="AYk-oc-LAX"/>
+                                            <outlet property="rgb" destination="TG9-Ed-jMP" id="OjR-FX-bw4"/>
                                             <outlet property="sliderControlBView" destination="5pF-MH-gOq" id="psG-V9-YoC"/>
                                             <outlet property="sliderControlGView" destination="bNX-pf-KbL" id="A8t-bS-sNm"/>
                                             <outlet property="sliderControlRView" destination="ojk-1B-CI0" id="ptf-Hl-DF5"/>
@@ -88,13 +89,15 @@
                                         <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="circle" destination="mGg-ge-hbd" id="ZST-3F-isP"/>
+                                            <outlet property="hex" destination="PeL-2M-K0h" id="X7s-le-lFC"/>
+                                            <outlet property="rgb" destination="TG9-Ed-jMP" id="qLu-sC-uRX"/>
                                             <outlet property="sliderControlBView" destination="5pF-MH-gOq" id="MyS-iS-hLP"/>
                                             <outlet property="sliderControlGView" destination="bNX-pf-KbL" id="ndu-LR-g0i"/>
                                             <outlet property="sliderControlRView" destination="ojk-1B-CI0" id="T7p-cg-kGE"/>
                                         </connections>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="77.160.212" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TG9-Ed-jMP">
-                                        <rect key="frame" x="40" y="241" width="99" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="127.127.127" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TG9-Ed-jMP">
+                                        <rect key="frame" x="40" y="241" width="110" height="25"/>
                                         <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -113,6 +116,8 @@
                                         <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="circle" destination="mGg-ge-hbd" id="xNH-pT-m0p"/>
+                                            <outlet property="hex" destination="PeL-2M-K0h" id="uQi-JW-puc"/>
+                                            <outlet property="rgb" destination="TG9-Ed-jMP" id="SM7-13-MTX"/>
                                             <outlet property="sliderControlBView" destination="5pF-MH-gOq" id="Zsn-gE-ttJ"/>
                                             <outlet property="sliderControlGView" destination="bNX-pf-KbL" id="Tcg-Xn-Leg"/>
                                             <outlet property="sliderControlRView" destination="ojk-1B-CI0" id="Ram-WT-yev"/>
@@ -122,7 +127,6 @@
                                 <constraints>
                                     <constraint firstItem="TG9-Ed-jMP" firstAttribute="leading" secondItem="6Hz-uw-FCb" secondAttribute="leading" constant="40" id="7vb-ub-Heh"/>
                                     <constraint firstAttribute="bottom" secondItem="aVE-Ac-4xm" secondAttribute="bottom" constant="285" id="912-Kb-csY"/>
-                                    <constraint firstAttribute="trailing" secondItem="TG9-Ed-jMP" secondAttribute="trailing" constant="181" id="Br7-2m-tV6"/>
                                     <constraint firstItem="Dus-TX-Cm2" firstAttribute="leading" secondItem="6Hz-uw-FCb" secondAttribute="leading" id="CJv-Ib-hiD"/>
                                     <constraint firstAttribute="bottom" secondItem="TG9-Ed-jMP" secondAttribute="bottom" constant="303" id="Cfe-cR-L0X"/>
                                     <constraint firstItem="TG9-Ed-jMP" firstAttribute="leading" secondItem="6Hz-uw-FCb" secondAttribute="leading" constant="40" id="Ch7-za-H3J"/>

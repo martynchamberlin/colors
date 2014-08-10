@@ -19,7 +19,8 @@
 @property (nonatomic, weak) IBOutlet UIView * sliderControlBView;
 
 @property (nonatomic, weak) IBOutlet UIView * circle;
-
+@property (nonatomic, weak) IBOutlet UILabel * rgb;
+@property (nonatomic, weak) IBOutlet UILabel * hex;
 @end
 
 @implementation SliderView
@@ -40,7 +41,6 @@ static float b = .5;
     
     [(ViewController *)[self sliderViewDelegate] changeStuff];
     return self;
-    
 
 }
 
@@ -167,6 +167,21 @@ static float b = .5;
 //   }
     [view.layer addSublayer: gradientLayer];
     [view.layer addSublayer: circle];
+    
+    NSString *rr = [NSString stringWithFormat:@"%d", (int) (r * 255.0) ];
+    NSString *gg = [NSString stringWithFormat:@"%d", (int) (g * 255) ];
+    NSString *bb = [NSString stringWithFormat:@"%d", (int) (b * 255) ];
+    NSMutableString *rgb = [[NSMutableString alloc] initWithString:rr];
+    [rgb appendString:@"."];
+    [rgb appendString:gg];
+    [rgb appendString:@"."];
+    [rgb appendString:bb];
+    
+    self.rgb.text = rgb;
+    long long longlongred = (long long) (r * 255);
+    long long longlonggreen = (long long) (g * 255);
+    long long longlongblue = (long long) (b * 255);
+    self.hex.text = [NSString stringWithFormat:@"%02llx%02llx%02llx", longlongred, longlonggreen, longlongblue];
 
 }
 
@@ -174,5 +189,6 @@ static float b = .5;
 //    [(UIScrollView *)self.superview setBounces:YES];
     [(UIScrollView *)self.superview setScrollEnabled:YES];
 }
+
 
 @end
