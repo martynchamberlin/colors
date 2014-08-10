@@ -13,21 +13,34 @@
 
 @property (nonatomic) int xBeforeTouchesMoved;
 
-@property (nonatomic, strong) IBOutlet UIView * sliderControlRView;
-@property (nonatomic, strong) IBOutlet UIView * sliderControlGView;
-@property (nonatomic, strong) IBOutlet UIView * sliderControlBView;
-@property float r;
-@property float g;
-@property float b;
+@property (nonatomic, weak) IBOutlet UIView * sliderControlRView;
+@property (nonatomic, weak) IBOutlet UIView * sliderControlGView;
+@property (nonatomic, weak) IBOutlet UIView * sliderControlBView;
+
+@property (nonatomic, weak) IBOutlet UIView * circle;
+
 
 @end
 
 @implementation SliderView
 
+// These hold a value from 0.0 to 1.0
+static float r = .5;
+static float g = .5;
+static float b = .5;
+
  -(id)initWithCoder:(NSCoder*)coder
 {
     self = [super initWithCoder:coder];
+    self.circle.layer.cornerRadius = self.circle.frame.size.width / 2; // not working, so doing it in the view controller
+    
+    [self updateRedControl];
+    [self updateGreenControl];
+    [self updateBlueControl];
+    
     return self;
+    
+
 }
 
 // In order to determine how far a person has scrolled,
@@ -76,56 +89,84 @@
     
     if ( self.tag == 0 )
     {
+        r = distance;
         [self updateGreenControl];
         [self updateBlueControl];
     }
     else if ( self.tag == 1 )
     {
+        g = distance;
         [self updateRedControl];
         [self updateBlueControl];
     }
     else if ( self.tag == 2 )
     {
+        b = distance;
         [self updateRedControl];
         [self updateGreenControl];
     }
-    
-    NSLog( @"%f", distance);
+
+    self.circle.backgroundColor = [[UIColor alloc] initWithRed:r green:g blue:b alpha:1.0];
 }
 
 
 - (void)updateRedControl
 {
-    [self updateBox:0
-             startG:self.r
-             startB:self.g
+    [self updateBox:self.sliderControlRView.superview
+             startR:0
+             startG:g
+             startB:b
             finishR:1
-            finishG:self.g
-            finishB:self.b ];
+            finishG:g
+            finishB:b ];
 }
 - (void) updateGreenControl
 {
-    [self updateBox:self.r
+    [self updateBox:self.sliderControlGView.superview
+             startR:r
              startG:0
-             startB:self.g
-            finishR:self.r
+             startB:b
+            finishR:r
             finishG:1
-            finishB:self.g ];
+            finishB:b ];
 }
 - (void)updateBlueControl
 {
     
-    [self updateBox:self.r
-             startG:self.g
+    [self updateBox:self.sliderControlBView.superview
+             startR:r
+             startG:g
              startB:0
-            finishR:self.r
-            finishG:self.g
+            finishR:r
+            finishG:g
             finishB:1];
 }
 
-- (void)updateBox:(float)startR startG:(float)startG startB:(float)startB finishR:(float)finishR finishG:(float)finishG finishB:(float)finishB
+- (void)updateBox:(UIView *)view startR:(float)startR startG:(float)startG startB:(float)startB finishR:(float)finishR finishG:(float)finishG finishB:(float)finishB
 {
+    CAGradientLayer * gradientLayer = [CAGradientLayer layer];
+    gradientLayer.frame = view.bounds;
+    gradientLayer.startPoint = CGPointMake(.1, 0);
+    gradientLayer.endPoint = CGPointMake(.9, 0);
     
+    UIColor *startColor = [UIColor colorWithRed:startR
+                                          green:startG
+                                           blue:startB
+                                          alpha:1.0];
+    UIColor *finishColor = [UIColor colorWithRed:finishR
+                                           green:finishG
+                                            blue:finishB
+                                           alpha:1.0];
+    gradientLayer.colors = [NSArray arrayWithObjects: (id)[startColor CGColor],(id)[finishColor CGColor], nil];
+    CALayer *circle = [view.subviews.firstObject layer];
+    // Annoying this code kills the app at runtime, because without it, I'm convinced this is the reason it hogs up
+    // more memory than it should
+//    for (CALayer *layer in view.layer.sublayers) {
+//        [layer removeFromSuperlayer];
+//   }
+    [view.layer addSublayer: gradientLayer];
+    [view.layer addSublayer: circle];
+
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {

@@ -13,4 +13,6 @@
 //  SliderView.h
 @interface SliderView : UIView 
 
+- (void)updateRedControl;
+
 @end

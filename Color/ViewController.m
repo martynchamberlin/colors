@@ -29,6 +29,10 @@
     self.circleControl2.layer.cornerRadius = self.circleControl2.layer.bounds.size.width / 2;
     self.circleControl3.layer.cornerRadius = self.circleControl3.layer.bounds.size.width / 2;
     //self.scrollView.bounces = NO;
+    
+    SliderView * sliderView = [[SliderView alloc] init];
+    [sliderView updateRedControl];
+    
 }
 
 - (void)didReceiveMemoryWarning {
