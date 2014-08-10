@@ -21,10 +21,10 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Hz-uw-FCb">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVE-Ac-4xm">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aVE-Ac-4xm">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="283"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#4D80D4" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PeL-2M-K0h">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="#4D80D4" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PeL-2M-K0h">
                                                 <rect key="frame" x="190" y="242" width="90" height="24"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -42,6 +42,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="mGg-ge-hbd" secondAttribute="bottom" priority="500" constant="81" id="0pE-Rj-Z1c"/>
+                                            <constraint firstAttribute="trailing" secondItem="PeL-2M-K0h" secondAttribute="trailing" constant="40" id="7AX-iG-aYw"/>
                                             <constraint firstItem="mGg-ge-hbd" firstAttribute="top" secondItem="aVE-Ac-4xm" secondAttribute="top" priority="500" constant="40" id="9qz-WC-WtK"/>
                                             <constraint firstItem="mGg-ge-hbd" firstAttribute="leading" secondItem="aVE-Ac-4xm" secondAttribute="leading" priority="500" constant="79" id="EAZ-rU-1zZ"/>
                                             <constraint firstItem="mGg-ge-hbd" firstAttribute="leading" secondItem="aVE-Ac-4xm" secondAttribute="leading" priority="500" constant="79" id="IPH-T6-Z2b"/>
@@ -54,7 +55,7 @@
                                             <constraint firstItem="mGg-ge-hbd" firstAttribute="top" secondItem="aVE-Ac-4xm" secondAttribute="top" priority="500" constant="40" id="wuK-EC-aOZ"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dus-TX-Cm2" customClass="SliderView">
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dus-TX-Cm2" customClass="SliderView">
                                         <rect key="frame" x="0.0" y="302" width="320" height="60"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ojk-1B-CI0">
@@ -73,7 +74,7 @@
                                             <outlet property="sliderControlRView" destination="ojk-1B-CI0" id="ptf-Hl-DF5"/>
                                         </connections>
                                     </view>
-                                    <view tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IvO-cq-Wme" customClass="SliderView">
+                                    <view tag="2" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IvO-cq-Wme" customClass="SliderView">
                                         <rect key="frame" x="0.0" y="479" width="320" height="60"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5pF-MH-gOq">
@@ -92,13 +93,13 @@
                                             <outlet property="sliderControlRView" destination="ojk-1B-CI0" id="T7p-cg-kGE"/>
                                         </connections>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="77.160.212" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TG9-Ed-jMP">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="77.160.212" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TG9-Ed-jMP">
                                         <rect key="frame" x="40" y="241" width="99" height="24"/>
                                         <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ad6-GV-JGM" customClass="SliderView">
+                                    <view tag="1" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ad6-GV-JGM" customClass="SliderView">
                                         <rect key="frame" x="0.0" y="390" width="320" height="60"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bNX-pf-KbL">
@@ -120,48 +121,31 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="TG9-Ed-jMP" firstAttribute="leading" secondItem="6Hz-uw-FCb" secondAttribute="leading" constant="40" id="7vb-ub-Heh"/>
-                                    <constraint firstItem="Dus-TX-Cm2" firstAttribute="leading" secondItem="6Hz-uw-FCb" secondAttribute="leading" id="8Ab-KS-LFg"/>
-                                    <constraint firstAttribute="trailing" secondItem="Dus-TX-Cm2" secondAttribute="trailing" id="8ox-DA-vmy"/>
                                     <constraint firstAttribute="bottom" secondItem="aVE-Ac-4xm" secondAttribute="bottom" constant="285" id="912-Kb-csY"/>
-                                    <constraint firstItem="Dus-TX-Cm2" firstAttribute="top" secondItem="TG9-Ed-jMP" secondAttribute="bottom" constant="37" id="Az5-ih-xFh"/>
-                                    <constraint firstItem="Dus-TX-Cm2" firstAttribute="top" secondItem="aVE-Ac-4xm" secondAttribute="bottom" constant="19" id="BbE-iz-dHo"/>
-                                    <constraint firstItem="Dus-TX-Cm2" firstAttribute="leading" secondItem="6Hz-uw-FCb" secondAttribute="leading" id="Bj1-zb-m3w"/>
                                     <constraint firstAttribute="trailing" secondItem="TG9-Ed-jMP" secondAttribute="trailing" constant="181" id="Br7-2m-tV6"/>
+                                    <constraint firstItem="Dus-TX-Cm2" firstAttribute="leading" secondItem="6Hz-uw-FCb" secondAttribute="leading" id="CJv-Ib-hiD"/>
                                     <constraint firstAttribute="bottom" secondItem="TG9-Ed-jMP" secondAttribute="bottom" constant="303" id="Cfe-cR-L0X"/>
                                     <constraint firstItem="TG9-Ed-jMP" firstAttribute="leading" secondItem="6Hz-uw-FCb" secondAttribute="leading" constant="40" id="Ch7-za-H3J"/>
-                                    <constraint firstItem="Dus-TX-Cm2" firstAttribute="leading" secondItem="aVE-Ac-4xm" secondAttribute="leading" id="D51-aa-p62"/>
                                     <constraint firstItem="aVE-Ac-4xm" firstAttribute="centerX" secondItem="6Hz-uw-FCb" secondAttribute="centerX" id="Era-Rv-cmv"/>
                                     <constraint firstItem="aVE-Ac-4xm" firstAttribute="top" secondItem="6Hz-uw-FCb" secondAttribute="top" priority="500" id="FN3-5J-ooD"/>
                                     <constraint firstItem="TG9-Ed-jMP" firstAttribute="leading" secondItem="6Hz-uw-FCb" secondAttribute="leading" constant="40" id="G1p-vY-Sfs"/>
                                     <constraint firstItem="aVE-Ac-4xm" firstAttribute="centerX" secondItem="ojk-1B-CI0" secondAttribute="centerX" id="LbS-8E-a7L"/>
                                     <constraint firstItem="aVE-Ac-4xm" firstAttribute="leading" secondItem="6Hz-uw-FCb" secondAttribute="leading" id="NzZ-bb-uPv"/>
                                     <constraint firstItem="aVE-Ac-4xm" firstAttribute="leading" secondItem="6Hz-uw-FCb" secondAttribute="leading" priority="500" id="OAd-uZ-963"/>
-                                    <constraint firstAttribute="trailing" secondItem="Dus-TX-Cm2" secondAttribute="trailing" id="QPh-QY-Whd"/>
-                                    <constraint firstItem="aVE-Ac-4xm" firstAttribute="centerX" secondItem="Dus-TX-Cm2" secondAttribute="centerX" id="Roh-yX-CQG"/>
+                                    <constraint firstItem="IvO-cq-Wme" firstAttribute="leading" secondItem="6Hz-uw-FCb" secondAttribute="leading" id="S9m-K8-Hta"/>
                                     <constraint firstItem="TG9-Ed-jMP" firstAttribute="leading" secondItem="6Hz-uw-FCb" secondAttribute="leading" constant="40" id="TLc-Ms-KX0"/>
-                                    <constraint firstItem="aVE-Ac-4xm" firstAttribute="trailing" secondItem="Dus-TX-Cm2" secondAttribute="trailing" id="V9b-Jj-uPI"/>
-                                    <constraint firstItem="Dus-TX-Cm2" firstAttribute="centerX" secondItem="aVE-Ac-4xm" secondAttribute="centerX" id="VUL-ch-58w"/>
                                     <constraint firstItem="TG9-Ed-jMP" firstAttribute="top" secondItem="6Hz-uw-FCb" secondAttribute="top" constant="241" id="VXf-m2-meT"/>
                                     <constraint firstAttribute="trailing" secondItem="aVE-Ac-4xm" secondAttribute="trailing" priority="500" id="Yfe-CN-MiU"/>
                                     <constraint firstItem="aVE-Ac-4xm" firstAttribute="leading" secondItem="6Hz-uw-FCb" secondAttribute="leading" id="aFv-wL-AWb"/>
-                                    <constraint firstAttribute="trailing" secondItem="Dus-TX-Cm2" secondAttribute="trailing" id="aWz-Gk-mfv"/>
                                     <constraint firstItem="aVE-Ac-4xm" firstAttribute="top" secondItem="6Hz-uw-FCb" secondAttribute="top" id="ac7-fL-YEI"/>
                                     <constraint firstItem="aVE-Ac-4xm" firstAttribute="leading" secondItem="6Hz-uw-FCb" secondAttribute="leading" id="cu3-1q-8gR"/>
                                     <constraint firstItem="aVE-Ac-4xm" firstAttribute="top" secondItem="6Hz-uw-FCb" secondAttribute="top" id="gfV-qZ-pjX"/>
-                                    <constraint firstItem="Dus-TX-Cm2" firstAttribute="top" secondItem="6Hz-uw-FCb" secondAttribute="top" constant="302" id="ibm-gJ-Tre"/>
-                                    <constraint firstItem="Dus-TX-Cm2" firstAttribute="top" secondItem="aVE-Ac-4xm" secondAttribute="bottom" constant="19" id="k7r-j0-vKb"/>
-                                    <constraint firstAttribute="bottom" secondItem="Dus-TX-Cm2" secondAttribute="bottom" constant="206" id="mv1-En-BfL"/>
+                                    <constraint firstItem="ad6-GV-JGM" firstAttribute="leading" secondItem="6Hz-uw-FCb" secondAttribute="leading" id="n2i-rO-4n3"/>
                                     <constraint firstAttribute="trailing" secondItem="aVE-Ac-4xm" secondAttribute="trailing" id="o6c-Vo-xel"/>
                                     <constraint firstItem="aVE-Ac-4xm" firstAttribute="top" secondItem="6Hz-uw-FCb" secondAttribute="top" id="oKh-8Q-fFq"/>
-                                    <constraint firstItem="Dus-TX-Cm2" firstAttribute="top" secondItem="6Hz-uw-FCb" secondAttribute="top" constant="302" id="opc-cU-ddF"/>
                                     <constraint firstItem="bNX-pf-KbL" firstAttribute="centerX" secondItem="6Hz-uw-FCb" secondAttribute="centerX" id="qur-zW-UpL"/>
-                                    <constraint firstItem="aVE-Ac-4xm" firstAttribute="leading" secondItem="Dus-TX-Cm2" secondAttribute="leading" id="uOl-fS-Xor"/>
-                                    <constraint firstItem="Dus-TX-Cm2" firstAttribute="centerX" secondItem="6Hz-uw-FCb" secondAttribute="centerX" id="ujd-ol-j2T"/>
-                                    <constraint firstItem="Dus-TX-Cm2" firstAttribute="leading" secondItem="6Hz-uw-FCb" secondAttribute="leading" id="v2K-we-Ne3"/>
-                                    <constraint firstItem="Dus-TX-Cm2" firstAttribute="trailing" secondItem="aVE-Ac-4xm" secondAttribute="trailing" id="vIv-v9-Jdk"/>
                                     <constraint firstAttribute="trailing" secondItem="aVE-Ac-4xm" secondAttribute="trailing" id="wXm-3I-jgC"/>
                                     <constraint firstAttribute="centerX" secondItem="5pF-MH-gOq" secondAttribute="centerX" id="wYi-Im-ktD"/>
-                                    <constraint firstItem="Dus-TX-Cm2" firstAttribute="leading" secondItem="6Hz-uw-FCb" secondAttribute="leading" id="y7c-7R-mVf"/>
                                     <constraint firstItem="TG9-Ed-jMP" firstAttribute="top" secondItem="6Hz-uw-FCb" secondAttribute="top" constant="241" id="zAm-Zp-p0V"/>
                                 </constraints>
                                 <connections>
@@ -171,10 +155,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="width" secondItem="ad6-GV-JGM" secondAttribute="width" id="2Sf-Nj-bla"/>
                             <constraint firstItem="6Hz-uw-FCb" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="3Mv-0H-Qvf"/>
-                            <constraint firstAttribute="width" secondItem="Dus-TX-Cm2" secondAttribute="width" id="5nK-av-p4b"/>
+                            <constraint firstAttribute="width" secondItem="IvO-cq-Wme" secondAttribute="width" id="F6o-mu-gV4"/>
                             <constraint firstItem="6Hz-uw-FCb" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="FDf-db-PTC"/>
                             <constraint firstAttribute="width" secondItem="aVE-Ac-4xm" secondAttribute="width" id="Of7-2x-v8d"/>
+                            <constraint firstAttribute="width" secondItem="Dus-TX-Cm2" secondAttribute="width" id="ZYL-PZ-Uzf"/>
                             <constraint firstItem="6Hz-uw-FCb" firstAttribute="leading" secondItem="jyV-Pf-zRb" secondAttribute="leading" id="tbZ-eB-9V5"/>
                             <constraint firstItem="6Hz-uw-FCb" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" id="xZS-Et-QqO"/>
                         </constraints>
