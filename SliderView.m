@@ -8,6 +8,7 @@
 
 #import "SliderView.h"
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface SliderView()
 
@@ -18,7 +19,6 @@
 @property (nonatomic, weak) IBOutlet UIView * sliderControlBView;
 
 @property (nonatomic, weak) IBOutlet UIView * circle;
-
 
 @end
 
@@ -38,6 +38,7 @@ static float b = .5;
     [self updateGreenControl];
     [self updateBlueControl];
     
+    [(ViewController *)[self sliderViewDelegate] changeStuff];
     return self;
     
 

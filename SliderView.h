@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
-
+#import "ViewController.h"
 
 //  SliderView.h
-@interface SliderView : UIView 
-
-- (void)updateRedControl;
-
+@protocol SliderViewDelegate <NSObject>
+@optional
+- (void) isScrollViewToBounce:(BOOL)isBounce;
 @end
+
+@interface SliderView : UIView
+@property (nonatomic, weak) id <SliderViewDelegate> sliderViewDelegate;
+@end    
